@@ -28,10 +28,9 @@ export function CreatorSection() {
               <div className="-mt-12 mb-6 flex items-end gap-4">
                 <div className="h-24 w-24 overflow-hidden rounded-2xl border-4 border-card bg-secondary">
                   <img
-                    src="https://github.com/aguitauwu.png"
+                    src="/images/agua-avatar.jpg"
                     alt="agua_omg avatar"
                     className="h-full w-full object-cover"
-                    crossOrigin="anonymous"
                   />
                 </div>
                 <div className="mb-1">
