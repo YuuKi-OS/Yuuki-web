@@ -6,6 +6,7 @@ import { Hero } from "@/components/yuuki/hero"
 import { ModelSection } from "@/components/yuuki/model-section"
 import { EcosystemSection } from "@/components/yuuki/ecosystem-section"
 import { StatsSection } from "@/components/yuuki/stats-section"
+import { NewsSection } from "@/components/yuuki/news-section"
 import { CreatorSection } from "@/components/yuuki/creator-section"
 import { Footer } from "@/components/yuuki/footer"
 
@@ -121,6 +122,10 @@ export default function Page() {
       <Divider />
       <ErrorBoundary name="StatsSection">
         <StatsSection />
+      </ErrorBoundary>
+      <Divider />
+      <ErrorBoundary name="NewsSection">
+        <NewsSection />
       </ErrorBoundary>
       <Divider />
       <ErrorBoundary name="CreatorSection">
