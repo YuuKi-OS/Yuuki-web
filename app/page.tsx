@@ -44,7 +44,6 @@ class ErrorBoundary extends React.Component<
 }
 
 export default function Page() {
-  console.log("[v0] Page component rendering")
   return (
     <main className="min-h-screen bg-background text-foreground">
       <ErrorBoundary name="Navbar">
@@ -80,27 +79,41 @@ export default function Page() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-12 text-center">
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[rgba(244,114,182,0.15)] border border-[rgba(244,114,182,0.25)]">
-                <svg className="h-8 w-8 text-[#f472b6]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-                </svg>
+            <div className="overflow-hidden rounded-2xl border border-border bg-card">
+              {/* Window chrome */}
+              <div className="flex items-center justify-between border-b border-border px-4 py-3">
+                <div className="flex items-center gap-2">
+                  <div className="h-3 w-3 rounded-full bg-[#ef4444]/60" />
+                  <div className="h-3 w-3 rounded-full bg-[#eab308]/60" />
+                  <div className="h-3 w-3 rounded-full bg-[#22c55e]/60" />
+                </div>
+                <span className="text-xs font-mono text-muted-foreground">
+                  opceanai-yuuki.hf.space
+                </span>
+                <a
+                  href="https://huggingface.co/spaces/OpceanAI/Yuuki"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-[#f472b6] hover:underline"
+                >
+                  Open in new tab
+                </a>
               </div>
-              <h3 className="mb-3 text-xl font-bold text-foreground">Interactive Playground</h3>
-              <p className="mx-auto mb-8 max-w-md text-sm text-muted-foreground leading-relaxed">
-                The Yuuki Space runs the Yuuki-best model on HuggingFace infrastructure.
-                Generate code in Agda, C, Python, Assembly, and more.
-              </p>
-              <a
-                href="https://huggingface.co/spaces/OpceanAI/Yuuki"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-[#f472b6] px-8 py-3.5 text-sm font-semibold text-[#0a0a0a] transition-opacity hover:opacity-90"
-              >
-                Launch Yuuki Space
-                <span>{">"}</span>
-              </a>
+
+              {/* Gradio Space iframe */}
+              <iframe
+                src="https://opceanai-yuuki.hf.space"
+                title="Yuuki Gradio Demo"
+                width="100%"
+                height="450"
+                style={{ border: 0, background: "#0b0f19" }}
+                loading="lazy"
+              />
             </div>
+
+            <p className="mt-4 text-center text-xs text-muted-foreground">
+              The Space may take a moment to load if it has been idle. Powered by HuggingFace Spaces.
+            </p>
           </div>
         </section>
       </ErrorBoundary>
@@ -130,6 +143,19 @@ export default function Page() {
                     Yuuki is built with zero budget by a single person. Your support helps keep the
                     project alive and growing -- better hardware, more training time, and new features.
                   </p>
+
+                  <div className="mb-8 flex justify-center">
+                    <div className="overflow-hidden rounded-xl border border-border">
+                      <iframe
+                        src="https://github.com/sponsors/aguitauwu/card"
+                        title="Sponsor aguitauwu"
+                        width={600}
+                        height={225}
+                        style={{ border: 0, maxWidth: "100%" }}
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
 
                   <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                     <a
