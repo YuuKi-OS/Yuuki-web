@@ -1,0 +1,88 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #050505; /* Preserved from existing */
+  --foreground: #fafafa; /* Preserved from existing */
+  --card: #0e0e0e; /* Preserved from existing */
+  --card-foreground: #fafafa; /* Preserved from existing */
+  --popover: #0e0e0e; /* Preserved from existing */
+  --popover-foreground: #fafafa; /* Preserved from existing */
+  --primary: #f472b6; /* Preserved from existing */
+  --primary-foreground: #0a0a0a; /* Preserved from existing */
+  --secondary: #161616; /* Preserved from existing */
+  --secondary-foreground: #e5e5e5; /* Preserved from existing */
+  --muted: #1a1a1a; /* Preserved from existing */
+  --muted-foreground: #737373; /* Preserved from existing */
+  --accent: #f472b6; /* Preserved from existing */
+  --accent-foreground: #0a0a0a; /* Preserved from existing */
+  --destructive: #ef4444; /* Preserved from existing */
+  --destructive-foreground: #fafafa; /* Preserved from existing */
+  --border: #1f1f1f; /* Preserved from existing */
+  --input: #1f1f1f; /* Preserved from existing */
+  --ring: #f472b6; /* Preserved from existing */
+  --chart-1: #f472b6; /* Preserved from existing */
+  --chart-2: #22c55e; /* Preserved from existing */
+  --chart-3: #eab308; /* Preserved from existing */
+  --chart-4: #3b82f6; /* Preserved from existing */
+  --chart-5: #a855f7; /* Preserved from existing */
+  --radius: 0.625rem; /* Preserved from existing */
+  --sakura: #f472b6; /* Preserved from existing */
+  --sakura-dim: rgba(244, 114, 182, 0.15); /* Preserved from existing */
+  --sakura-border: rgba(244, 114, 182, 0.25); /* Preserved from existing */
+
+}
+
+
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback'; /* Preserved from existing */
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback'; /* Preserved from existing */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sakura: var(--sakura); /* Preserved from existing */
+  --color-sakura-dim: var(--sakura-dim); /* Preserved from existing */
+  --color-sakura-border: var(--sakura-border); /* Preserved from existing */
+
+
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
